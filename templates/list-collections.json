@@ -1,1 +1,35 @@
-{"sections":{"main":{"type":"main-list-collections","settings":{"image_ratio":"square"}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square"
+      }
+    },
+    "164887792286894547": {
+      "type": "custom-banner",
+      "blocks": {
+        "215dcef6-4458-478c-b04c-999e289f44a7": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        }
+      },
+      "block_order": [
+        "215dcef6-4458-478c-b04c-999e289f44a7"
+      ],
+      "settings": {
+        "img": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
+        "title": "Collection name",
+        "text": "asdasd asdas dasd"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164887792286894547"
+  ]
+}

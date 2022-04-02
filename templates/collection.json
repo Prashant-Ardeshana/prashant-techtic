@@ -1,1 +1,40 @@
-{"sections":{"banner":{"type":"main-collection-banner","settings":{}},"product-grid":{"type":"main-collection-product-grid","settings":{}}},"order":["banner","product-grid"]}
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "collapse_on_larger_devices": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1648877972dad02e60": {
+      "type": "custom-banner",
+      "settings": {
+        "img": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
+        "title": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid",
+    "1648877972dad02e60"
+  ]
+}

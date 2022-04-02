@@ -5,7 +5,7 @@
       <div class="new-banner__inner">
         <img src="{{ section.settings.img | img_url: '1920x' }}" width="100%"> 
         <h1 class="new-banner__title">
-          {% if section.settings.title %}
+          {% if section.settings.title != blank %}
           {{ section.settings.title }}
           {% else %}
           {{ collection.title }}

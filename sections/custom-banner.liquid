@@ -1,7 +1,60 @@
+
+<section>
+  <div class="new-banner">
+    <div class="container">
+      <div class="new-banner__inner">
+        <img src="{{ section.settings.img | img_url: 'master' }}">
+        <h1 class="new-banner__title">{{ section.settings.title }}</h1>
+        <p class="new-banner__text">{{ section.settings.text }}</p>
+        <ul>
+          {% for block in section.blocks %}
+          <li>{{ block.settings.list_text }}</li>
+          {% endfor %}
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "New Banner",
+	"presets": [
+		{
+			"name": "New Banner"
+		}
+	],
+    "settings": [
+		{
+			"type":"text",
+			"id": "title",
+			"label": "Title"
+		},
+		{
+			"type":"text",
+			"id": "Text",
+			"label": "Text"
+		}
+	],
+	"blocks": [
+		{
+			"type": "list",
+            "name": "List",
+            "limit": 1,
+            "settings": [
+                {
+                  "type": "text",
+                  "id": "list_text",
+                  "default": "Item",
+                  "label": "Item"
+                }
+			]
+		}
+	]
   }
 {% endschema %}
 

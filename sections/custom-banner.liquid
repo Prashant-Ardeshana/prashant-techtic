@@ -11,7 +11,13 @@
           {{ collection.title }}
           {% endif %}
         </h1>
-        <p class="new-banner__text">{{ section.settings.text }}</p>
+        <p class="new-banner__text">
+        {% if section.settings.text != blank %}
+          {{ section.settings.text }}
+          {% else %}
+          {{ collection.description }}
+          {% endif %}
+        </p>
         <ul>
 
           {% for block in section.blocks %}

@@ -21,46 +21,46 @@
 
 
 {% schema %}
-  {
-    "name": "New Banner",
-	"presets": [
-		{
-			"name": "New Banner"
-		}
-	],
-    "settings": [
-		{
-			"type":"image_picker",
-			"id": "img",
-			"label": "Image"
-		},
-		{
-			"type":"text",
-			"id": "title",
-			"label": "Title"
-		},
-		{
-			"type":"text",
-			"id": "Text",
-			"label": "Text"
-		}
-	],
-	"blocks": [
-		{
-			"type": "list",
-            "name": "List",
-            "limit": 1,
-            "settings": [
-                {
-                  "type": "text",
-                  "id": "list_text",
-                  "default": "Item",
-                  "label": "Item"
-                }
-			]
-		}
-	]
-  }
+{
+   "name":"New Banner",
+   "presets":[
+      {
+         "name":"New Banner"
+      }
+   ],
+   "settings":[
+      {
+         "type":"image_picker",
+         "id":"img",
+         "label":"Image"
+      },
+      {
+         "type":"text",
+         "id":"title",
+         "label":"Title"
+      },
+      {
+         "type":"text",
+         "id":"Text",
+         "label":"Text"
+      }
+   ],
+   "blocks":[
+      {
+         "type":"list",
+         "name":"List",
+         "limit":1,
+         "settings":[
+            {
+               "type":"text",
+               "id":"list_text",
+               "default":"Item",
+               "label":"Item"
+            }
+         ]
+      }
+   ]
+}
 {% endschema %}
 
 {% stylesheet %}

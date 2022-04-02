@@ -7,10 +7,11 @@
         <h1 class="new-banner__title">{{ section.settings.title }}</h1>
         <p class="new-banner__text">{{ section.settings.text }}</p>
         <ul>
+
           {% for block in section.blocks %}
           <li>{{ block.settings.list_text }}</li>
           {% endfor %}
-          
+
         </ul>
       </div>
     </div>

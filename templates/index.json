@@ -193,6 +193,122 @@
     },
     "1648877535bd4ed581": {
       "type": "custom-banner",
+      "blocks": {
+        "21dc1189-429a-417d-9153-84fc94e1d45c": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "83fc7de8-3efa-4504-9434-d8118b9b862b": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "34c207df-8e6a-453e-b24c-552a13407110": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "3e156127-3a43-4f55-827f-42e08235b2c0": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "847b8232-8c4d-4c38-90f7-b65d85434495": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "147841e5-1d0a-4766-b8bd-34df46dab409": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "87c81bed-adcf-4568-b77a-583a5a2dbb73": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "dffc1312-7525-488b-947c-144c44e32dd6": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "a3195d36-8b1e-45b9-ac4c-353923530130": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "5212ba0d-dff0-4115-b9df-a72b46a5879f": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "9f2eb98a-72dd-43da-8f31-f677e66297d8": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "bfd015d8-f262-42de-b1ea-68e7164da45a": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "0a9181ab-3eb4-448a-b3e5-433f050871d6": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "68e18fbb-5a77-4880-a304-70ec724130ba": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "71adbe61-55dc-4425-b7da-8c74f5a20f89": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        },
+        "e0c73a5e-e2a2-4468-95d0-5d6c5f2de38b": {
+          "type": "list",
+          "settings": {
+            "list_text": "Item"
+          }
+        }
+      },
+      "block_order": [
+        "21dc1189-429a-417d-9153-84fc94e1d45c",
+        "83fc7de8-3efa-4504-9434-d8118b9b862b",
+        "34c207df-8e6a-453e-b24c-552a13407110",
+        "3e156127-3a43-4f55-827f-42e08235b2c0",
+        "847b8232-8c4d-4c38-90f7-b65d85434495",
+        "147841e5-1d0a-4766-b8bd-34df46dab409",
+        "87c81bed-adcf-4568-b77a-583a5a2dbb73",
+        "dffc1312-7525-488b-947c-144c44e32dd6",
+        "a3195d36-8b1e-45b9-ac4c-353923530130",
+        "5212ba0d-dff0-4115-b9df-a72b46a5879f",
+        "9f2eb98a-72dd-43da-8f31-f677e66297d8",
+        "bfd015d8-f262-42de-b1ea-68e7164da45a",
+        "0a9181ab-3eb4-448a-b3e5-433f050871d6",
+        "68e18fbb-5a77-4880-a304-70ec724130ba",
+        "71adbe61-55dc-4425-b7da-8c74f5a20f89",
+        "e0c73a5e-e2a2-4468-95d0-5d6c5f2de38b"
+      ],
       "settings": {
         "img": "shopify:\/\/shop_images\/ripe-red-strawberries-in-a-white-bowl.jpg",
         "title": "Banner Main Title",

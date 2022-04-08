@@ -87,7 +87,8 @@
       "Moly-Header": {
         "type": "Moly-Header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png"
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "menu": "header-menu"
         }
       }
     },

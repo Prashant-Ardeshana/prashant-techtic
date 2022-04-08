@@ -90,16 +90,60 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
+        {%- form 'create_customer', novalidate: 'novalidate' -%}
+        {%- if form.errors -%}
+        <h2 class="form__message" tabindex="-1" autofocus>
+          <svg aria-hidden="true" focusable="false" role="presentation">
+            <use href="#icon-error" />
+          </svg>
+          {{ 'templates.contact.form.error_heading' | t }}
+        </h2>
+        <ul> 
+          {%- for field in form.errors -%}
+          <li>
+            {%- if field == 'form' -%}
+            {{ form.errors.messages[field] }}
+            {%- else -%}
+            <a href="#RegisterForm-{{ field }}">
+              {{ form.errors.translated_fields[field] | capitalize }}
+              {{ form.errors.messages[field] }}
+            </a>
+            {%- endif -%}
+          </li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%}
         <div class="login-detalis pt-40 pr-40 pl-40 pb-40">
           <div class="login-input">
-            <input type="text" placeholder="Full Name...">
-            <input type="text" placeholder="Enter your email....">
-            <input type="text" placeholder="Enter your Password....">
-            <input type="text" placeholder="(+99) 00000000000">
-
+            
+            <input type="text" name="customer[first_name]" id="RegisterForm-FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocomplete="given-name" placeholder="{{ 'customer.register.first_name' | t }}" >
+            <input type="text" name="customer[last_name]" id="RegisterForm-LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocomplete="family-name" placeholder="{{ 'customer.register.last_name' | t }}" >
+            
+            <input type="email" name="customer[email]" id="RegisterForm-email" {% if form.email %} value="{{ form.email }}"{% endif %} spellcheck="false" autocapitalize="off" autocomplete="email" aria-required="true" {% if form.errors contains 'email' %} aria-invalid="true" aria-describedby="RegisterForm-email-error" {% endif %} placeholder="{{ 'customer.register.email' | t }}" >
+            {%- if form.errors contains 'email' -%}
+            <span id="RegisterForm-email-error" class="form__message">
+              <svg aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-error" />
+              </svg>
+              {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.
+            </span>
+            {%- endif -%}
+            
+            <input type="password" name="customer[password]" id="RegisterForm-password" aria-required="true" {% if form.errors contains 'password' %} aria-invalid="true" aria-describedby="RegisterForm-password-error" {% endif %} placeholder="{{ 'customer.register.password' | t }}" >
+            {%- if form.errors contains 'password' -%}
+            <span id="RegisterForm-password-error" class="form__message">
+              <svg aria-hidden="true" focusable="false" role="presentation">
+                <use href="#icon-error" />
+              </svg>
+              {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
+            </span>
+            {%- endif -%}
+            
           </div>
           <div class="login-button text-center pt-30">
-            <a href="#" >Login</a>
+            <button>
+              {{ 'customer.register.submit' | t }}
+            </button>
           </div>
           <div class="login-information pt-25">
             <div class="remember-me">
@@ -108,6 +152,7 @@
             </div>
           </div>
         </div>
+        {%- endform -%}
       </div>
     </div>
   </div>

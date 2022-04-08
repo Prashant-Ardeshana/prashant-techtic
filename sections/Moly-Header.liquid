@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-12 offset-xl-0 offset-lg-0 offset-md-5 offset-sm-4 ">
           <div class="logo text-center text-lg-left">
-            <a href="index.html"><img src="assets/img/logo/logo.png" alt="moly-logo"></a>
+            <a href="{{ routes.root_url }}"><img src="{{ section.settings.logo | img_url: 'x33' }}" alt="moly-logo"></a>
           </div>
         </div>
         <div class="col-xl-8 col-lg-8 col-md-auto col-sm-auto">
@@ -90,7 +90,7 @@
         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12">
           <div class="site-info  d-flex justify-content-end">
             <div class="search position-relative mr-15 ">
-              <a href="#"><img src="assets/img/icon/search-white.png" alt=""></a>
+              <a href="#"><img src="{{ 'search-white.png' | asset_url }}" alt=""></a>
               <div class="search-form">
                 <form action="#">
                   <input type="text" placeholder="Enter your keywords.....">
@@ -102,10 +102,10 @@
               <div class="badge">0</div>
             </div>
             <div class="cart position-relative pt-10 mr-10">
-              <a href="#"><img src="assets/img/icon/bag.png" alt=""></a>
+              <a href="#"><img src="{{ 'bag.png' | asset_url }}" alt=""></a>
               <div class="badge">0</div>
 
-              <div  class="product-area product-shop-page mini-cart-product-page " >
+<!--               <div  class="product-area product-shop-page mini-cart-product-page " >
                 <div class="hot-sale-product-area "  >
                   <div class="hot-lookbook pt-10 pb-30">
                     <div class="product-wrapper d-flex">
@@ -151,7 +151,7 @@
 
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

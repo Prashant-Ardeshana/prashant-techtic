@@ -1,14 +1,40 @@
 
 {% section 'Moly-breadcrumb' %}
 
+<!-- =================Login Area Starts================= -->
 
+<div class="login-page-area pt-50">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
+        <div class="login-detalis pt-40 pr-40 pl-40 pb-40">
+          <div class="login-input">
+            <input type="text" placeholder="Enter your email....">
+            <input type="text" placeholder="Enter your Password....">
+          </div>
+          <div class="or text-center">
+            <span>OR</span>
+          </div>
+          <div class="login-account text-center pt-10">
+            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="#"><i class="fab fa-google-plus-g"></i>Google</a>
+          </div>
+          <div class="login-button text-center pt-30">
+            <a href="#" >Login</a>
+          </div>
+          <div class="login-information pt-25">
+            <div class="remember-me">
+              <input type="checkbox" id="checkbox-1"><label for="checkbox-1">Remember Me</label>
+              <span class="float-right">Forgot <span>password?</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-
-
-
-
-
+<!-- =================Login Area Ends================= -->
 
 
 {{ 'customer.css' | asset_url | stylesheet_tag }}

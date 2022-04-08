@@ -5,7 +5,7 @@
     <div class="slider-area slider-area-2 owl-carousel position-relative">
       
        {% for block in section.blocks %} 
-      <div class="single-slide  " style="{{ block.settings.img | img_url: 'master' }}">
+      <div class="single-slide  " style="background-image: url({{ block.settings.img | img_url: 'master' }});">
         <div class="slider-content slider-height">
           <div class="container">
             <div class="row">

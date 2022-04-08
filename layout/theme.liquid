@@ -29,7 +29,26 @@
 
     {% render 'meta-tags' %}
 
+    
+    
+    <!-- scripts -->
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+
+    <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'modernizr-3.7.1.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'bootstrap.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'popper.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'jquery-mean-menu.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'isotope.pkgd.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'countdown.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'jquery.nice-number.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'jquery.magnific-popup.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'wow-1.3.0.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'main.js' | asset_url }}" defer="defer"></script>
+    
+    
     {{ content_for_header }}
 
     {%- liquid
@@ -189,7 +208,24 @@
       }
     {% endstyle %}
 
+    
+    <!-- stylesheets -->
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    
+    
+    {{ 'bootstrap.min.css' | asset_url | stylesheet_tag }}
+    {{ 'font-awesome.min.css' | asset_url | stylesheet_tag }}
+    {{ 'animate.css' | asset_url | stylesheet_tag }}
+    {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
+    {{ 'normalize.css' | asset_url | stylesheet_tag }}
+    {{ 'jquery.nice-number.css' | asset_url | stylesheet_tag }}
+    {{ 'mean-menu.css' | asset_url | stylesheet_tag }}
+    {{ 'default.css' | asset_url | stylesheet_tag }}
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+    
+    
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -210,11 +246,19 @@
   </head>
 
   <body class="gradien page-{{ template }} {{ page.handle }} {{ collection.handle }} {{ product.handle }}">
+    
+    <!-- =============Preloader Starts=============-->
+    <div class="loader">
+        <div class="loding-cricle"></div>
+    </div>
+    <!-- =============Preloader Ends=============-->
+    
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ "accessibility.skip_to_text" | t }}
     </a>
 
     {% section 'announcement-bar' %}
+    {% section 'header' %}
     {% section 'header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

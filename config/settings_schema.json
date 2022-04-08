@@ -87,6 +87,20 @@
     ]
   },
   {
+    "name": "Breadcrumb",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Breadcrumb"
+      },
+      {
+        "type": "image_picker",
+        "id": "breadcrumb_img",
+        "label": "Breadcrumb Image"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.typography.name",
     "settings": [
       {

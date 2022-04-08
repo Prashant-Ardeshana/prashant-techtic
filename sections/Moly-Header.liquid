@@ -13,76 +13,36 @@
           <div class="main-menu pt-5">
             <nav id="mobile-menu">
               <ul>
-                <li><a href="index.html">Home</a>
+                {%- for link in linklists.main-menu.links -%}
+                <li>
+                  <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+                    {{ link.title }}
+                  </a>
+                  {%- if link.links != blank -%}
                   <ul class="sub-menu">
-                    <li><a href="index.html">Home style 1</a></li>
-                    <li><a href="index-2.html">Home style 2</a></li>
-                    <li><a href="index-3.html">Home style 3</a></li>
-                    <li><a href="index-4.html">Home style 4</a></li>
-                    <li><a href="index-5.html">Home style 5</a></li>
-                    <li><a href="index-6.html">Home style 6</a></li>
-                    <li><a href="index-7.html">Home style 7</a></li>
-                    <li><a href="index-8.html">Home style 8</a></li>
-                  </ul>
-                </li>
-                <li><a href="blog-page.html">Features</a>
-                  <div class="badge">New</div>
-                </li>
-                <li><a href="blog-page.html">Fashion</a></li>
-                <li><a href="404-page.html">Software</a></li>
-                <li><a href="#">Page</a>
-                  <div class="badge">Sale</div>
-                  <ul class="sub-menu">
-                    <li><a href="login-page.html">Login</a></li>
-                    <li><a href="register-page.html">Register</a></li>
-                    <li><a href="cart-page.html">Cart</a></li>
-                    <li><a href="checkout-page.html">Checkout</a></li>
-                    <li><a href="about-page.html">About Us</a></li>
-                    <li><a href="404-page.html">404-page</a></li>
+                    {%- for child_link in link.links -%}
+                    <li>
+                      <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                        {{ child_link.title }}
+                      </a>
 
-                  </ul>
-                </li>
-                <li><a href="shop-detalis-page.html">Shop</a>
-                  <ul class="sub-menu">
-                    <li><a href="shop-grid-page.html">Shop-Grid</a>
+                      {%- if child_link.links != blank -%}
                       <ul class="sub-menu">
-                        <li><a href="shop-grid-page.html">Shop Grid</a>
-                        <li><a href="shop-grid-page-2.html">Shop Grid 2</a>
-                        <li><a href="shop-grid-page-3.html">Shop Grid 3</a>
-                        <li><a href="shop-grid-left-sidebar-page.html">Shop Grid Left
-                          Sidebar</a>
-                        <li><a href="shop-grid-right-sidebar-page.html">Shop Grid Right
-                          Sidebar</a>
+                        {%- for grandchild_link in child_link.links -%}
+                        <li><a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                          {{ grandchild_link.title }}
+                          </a>
+                        </li>
+                        {%- endfor -%}
+                      </ul>
+                      {%- endif -%}
 
-                      </ul>
                     </li>
-                    <li><a href="shop-list-page.html">Shop-List</a>
-                      <ul class="sub-menu">
-                        <li><a href="shop-list-left-sidebar-page.html">Shop List Left
-                          Sidebar</a></li>
-                        <li><a href="shop-list-right-sidebar-page.html">Shop List Right
-                          Sidebar</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="shop-detalis-page.html">Shop Detalis</a>
-                      <ul class="sub-menu">
-                        <li><a href="shop-detalis-left-sidebar-page.html">Shop Detalis
-                          Left Sidebar</a></li>
-                        <li><a href="shop-detalis-right-sidebar-page.html">Shop Detalis
-                          Right Sidebar</a></li>
-                      </ul>
-                    </li>
+                    {%- endfor -%}
                   </ul>
+                  {%- endif -%}
                 </li>
-                <li><a href="blog-page.html">Blog</a>
-                  <ul class="sub-menu">
-                    <li><a href="blog-page-2.html">Blog</a></li>
-                    <li><a href="blog-detalis-page.html">Blog Detalis</a></li>
-                    <li><a href="blog-left-sidebar-page.html">Blog Left Sidebar</a></li>
-                    <li><a href="blog-right-sidebar-page.html">Blog Right Sidebar</a></li>
-                  </ul>
-                </li>
-                <li><a href="contact-page.html">Contact Us</a></li>
+                {%- endfor -%}
               </ul>
             </nav>
           </div>

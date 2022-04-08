@@ -1,0 +1,6 @@
+main#MainContent {
+	margin-top: 100px;
+}
+.page-index main#MainContent {
+	margin-top: 0;
+}

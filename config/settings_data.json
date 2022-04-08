@@ -83,6 +83,12 @@
         "type": "main-password-footer",
         "settings": {
         }
+      },
+      "Moly-Header": {
+        "type": "Moly-Header",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/logo.png"
+        }
       }
     },
     "content_for_index": [

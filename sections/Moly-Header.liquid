@@ -12,8 +12,9 @@
         <div class="col-xl-8 col-lg-8 col-md-auto col-sm-auto">
           <div class="main-menu pt-5">
             <nav id="mobile-menu">
+              {% assign new_menu = section.settings.menu %}
               <ul>
-                {%- for link in linklists.main-menu.links -%}
+                {%- for link in new_menu.links -%}
                 <li>
                   <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
                     {{ link.title }}
@@ -139,6 +140,15 @@
         "type": "image_picker",
         "id": "logo",
 		"label": "Logo"
+      },
+	  {
+        "type": "header",
+        "content": "Menu navigation"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Select Menu"
       }
 	]
   }

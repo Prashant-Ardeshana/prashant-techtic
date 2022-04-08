@@ -3723,7 +3723,7 @@ div.owl-dots .active {
   margin-right: 5px;
 }
 
-.login-page-area .login-button a {
+.login-page-area .login-button button {
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
@@ -3740,7 +3740,7 @@ div.owl-dots .active {
   border: 1px solid transparent;
 }
 
-.login-page-area .login-button a:hover {
+.login-page-area .login-button button:hover {
   background-color: #0f0f0f;
   border-color: #f05036;
 }

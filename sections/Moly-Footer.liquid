@@ -1,4 +1,4 @@
-
+{% if section.settings.show_brands %}
 <!-- =================Brand Area Starts================= -->
 
 <div class="brand-area">
@@ -18,6 +18,7 @@
 </div>
 
 <!-- =================Brand Area Ends================= -->
+{% endif %}
 
 {% if section.settings.show_newsletter %}
 {% if section.settings.show_only_homepage %}
@@ -159,6 +160,12 @@
          "id":"newsletter_heading",
          "label":"Newsletter Heading",
          "default": "Get Discount 30% Off !"
+      },
+	  {
+         "type":"checkbox",
+         "id":"show_brands",
+         "label":"Show Brands",
+         "default": true
       }
    ],
    "blocks":[

@@ -97,6 +97,25 @@
         "type": "image_picker",
         "id": "breadcrumb_img",
         "label": "Breadcrumb Image"
+      },
+      {
+        "type": "text",
+        "id": "error_msg",
+        "label": "404 Title",
+        "default": "404",
+        "info": "Page not found title"
+      },
+      {
+        "type": "text",
+        "id": "login_msg",
+        "label": "Login Title",
+        "default": "Login"
+      },
+      {
+        "type": "text",
+        "id": "register_msg",
+        "label": "Register Title",
+        "default": "Register"
       }
     ]
   },

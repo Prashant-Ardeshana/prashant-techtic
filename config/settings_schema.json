@@ -120,6 +120,16 @@
     ]
   },
   {
+    "name": "404",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "page_not_found",
+        "label": "404 Image"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.typography.name",
     "settings": [
       {

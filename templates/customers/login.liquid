@@ -93,7 +93,7 @@
         <h4 id="recover" tabindex="-1">
           {{ 'customer.recover_password.title' | t }}
         </h4>
-        <div class="mt-5">
+        <div class="mt-20">
           <div class="login-detalis pt-40 pr-40 pl-40 pb-40">
             {%- form 'recover_customer_password' -%}
             {% assign recover_success = form.posted_successfully? %}
@@ -145,7 +145,7 @@
         <h4  id="login" tabindex="-1">
           {{ 'customer.login_page.title' | t }}
         </h4>
-        <div class="mt-5">
+        <div class="mt-20">
           <div class="login-detalis pt-40 pr-40 pl-40 pb-40">
             {%- if recover_success == true -%}
             <h5 class="form__message" tabindex="-1" autofocus>

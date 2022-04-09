@@ -1,7 +1,44 @@
+
+<!-- =================Product-sample Area Starts================= -->
+
+<div class="product-sample pt-40">
+  <div class="container">
+    <div class="row">
+
+      {% for collection in collections %}
+      <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4 col-6">
+        <div class="sample-warpper position-relative">
+          <div class="sample-img">
+            {% if collection.image %}
+            <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" display="block" />
+            {% else %}
+            <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" display="block" />
+            {% endif %}
+          </div>
+          <div class="sample-content text-center">
+            <h6>{{ collection.title }}</h6>
+            <span>{{ collection.all_products_count }} Items</span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      
+      
+    </div>
+  </div>
+</div>
+<!-- =================Product-sample Area Ends================= -->
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Moly Collection List",
+    "settings": [],
+	"presets" : [
+      {
+          "name": "Moly Collection List"
+      }
+	]
   }
 {% endschema %}
 

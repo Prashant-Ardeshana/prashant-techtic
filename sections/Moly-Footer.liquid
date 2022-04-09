@@ -66,13 +66,11 @@
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
           <div class="footer-widget">
             <h4>{{ section.settings.menu1_title }}</h4>
+            {% assign new_menu1 = section.settings.menu1 %}
             <ul class="footer-info">
-              <li><a href="about-page.html">About Us</a></li>
-              <li><a href="login-page.html">My Account</a></li>
-              <li><a href="about-page.html">Privacy Ploicy</a></li>
-              <li><a href="about-page.html"> Trems & Conditions</a></li>
-              <li><a href="about-page.html">Delivery Information</a></li>
-              <li><a href="about-page.html">Information</a></li>
+              {%- for link in new_menu1.links -%}
+              <li><a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+              {%- endfor -%}
             </ul>
           </div>
         </div>
@@ -81,13 +79,11 @@
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
           <div class="footer-widget">
             <h4>{{ section.settings.menu2_title }}</h4>
+            {% assign new_menu2 = section.settings.menu2 %}
             <ul class="footer-info">
-              <li><a href="about-page.html">About Us</a></li>
-              <li><a href="login-page.html">My Account</a></li>
-              <li><a href="about-page.html">Privacy Ploicy</a></li>
-              <li><a href="about-page.html"> Trems & Conditions</a></li>
-              <li><a href="about-page.html">Delivery Information</a></li>
-              <li><a href="about-page.html">Information</a></li>
+              {%- for link in new_menu2.links -%}
+              <li><a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+              {%- endfor -%}
             </ul>
           </div>
         </div>
@@ -96,13 +92,11 @@
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
           <div class="footer-widget">
             <h4>{{ section.settings.menu3_title }}</h4>
+            {% assign new_menu3 = section.settings.menu3 %}
             <ul class="footer-info">
-              <li><a href="about-page.html">About Us</a></li>
-              <li><a href="login-page.html">My Account</a></li>
-              <li><a href="about-page.html">Privacy Ploicy</a></li>
-              <li><a href="about-page.html"> Trems & Conditions</a></li>
-              <li><a href="about-page.html">Delivery Information</a></li>
-              <li><a href="about-page.html">Information</a></li>
+              {%- for link in new_menu3.links -%}
+              <li><a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+              {%- endfor -%}
             </ul>
           </div>
         </div>
@@ -111,13 +105,11 @@
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 mx-auto">
           <div class="footer-widget">
             <h4>{{ section.settings.menu4_title }}</h4>
+            {% assign new_menu4 = section.settings.menu4 %}
             <ul class="footer-info">
-              <li><a href="about-page.html">About Us</a></li>
-              <li><a href="login-page.html">My Account</a></li>
-              <li><a href="about-page.html">Privacy Ploicy</a></li>
-              <li><a href="about-page.html"> Trems & Conditions</a></li>
-              <li><a href="about-page.html">Delivery Information</a></li>
-              <li><a href="about-page.html">Information</a></li>
+              {%- for link in new_menu4.links -%}
+              <li><a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>{{ link.title }}</a></li>
+              {%- endfor -%}
             </ul>
           </div>
         </div>
@@ -151,71 +143,90 @@
 {
    "name":"Moly Footer",
    "settings":[
-	   {
+      {
          "type":"header",
          "content":"Brands"
       },
-	  {
+      {
          "type":"checkbox",
          "id":"show_brands",
          "label":"Show Brands",
-         "default": true
+         "default":true
       },
       {
          "type":"header",
          "content":"Newsletter"
       },
-	  {
+      {
          "type":"checkbox",
          "id":"show_newsletter",
          "label":"Show NewsLetter",
-         "default": true
+         "default":true
       },
-	  {
+      {
          "type":"checkbox",
          "id":"show_only_homepage",
          "label":"Show NewsLetter Only Homepage",
-         "default": true
+         "default":true
       },
-	  {
+      {
          "type":"text",
          "id":"newsletter_heading",
          "label":"Newsletter Heading",
-         "default": "Get Discount 30% Off !"
+         "default":"Get Discount 30% Off !"
       },
-	  {
+      {
          "type":"header",
          "content":"Menus"
       },
-	  {
+      {
          "type":"text",
          "id":"menu1_title",
          "label":"Menu 1 Title",
-         "default": "Information",
-		"info": "if title is blank you don't show menu"
+         "default":"Information",
+         "info":"if title is blank you don't show menu"
       },
-	  {
+      {
+         "type":"link_list",
+         "id":"menu1",
+         "label":"Select Menu 1"
+      },
+      {
          "type":"text",
          "id":"menu2_title",
          "label":"Menu 2 Title",
-         "default": "Customer Service",
-		"info": "if title is blank you don't show menu"
+         "default":"Customer Service",
+         "info":"if title is blank you don't show menu"
       },
-	  {
+      {
+         "type":"link_list",
+         "id":"menu2",
+         "label":"Select Menu 2"
+      },
+      {
          "type":"text",
          "id":"menu3_title",
          "label":"Menu 3 Title",
-         "default": "My Account",
-		"info": "if title is blank you don't show menu"
+         "default":"My Account",
+         "info":"if title is blank you don't show menu"
       },
-	  {
+      {
+         "type":"link_list",
+         "id":"menu3",
+         "label":"Select Menu 3"
+      },
+      {
          "type":"text",
          "id":"menu4_title",
          "label":"Menu 4 Title",
-         "default": "Extras",
-		"info": "if title is blank you don't show menu"
+         "default":"Extras",
+         "info":"if title is blank you don't show menu"
+      },
+      {
+         "type":"link_list",
+         "id":"menu4",
+         "label":"Select Menu 4"
       }
-	  
    ],
    "blocks":[
       {

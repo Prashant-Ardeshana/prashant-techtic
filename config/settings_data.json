@@ -141,9 +141,13 @@
           "show_only_homepage": false,
           "newsletter_heading": "Get Discount 30% Off !",
           "menu1_title": "Information",
+          "menu1": "header-menu",
           "menu2_title": "Customer Service",
-          "menu3_title": "My Account",
-          "menu4_title": ""
+          "menu2": "main-menu",
+          "menu3_title": "",
+          "menu3": "",
+          "menu4_title": "Extras",
+          "menu4": "footer"
         }
       }
     },

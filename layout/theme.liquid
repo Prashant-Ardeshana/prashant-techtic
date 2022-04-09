@@ -262,7 +262,7 @@
     {% section 'announcement-bar' %}
     {% section 'Moly-Header' %}
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == 'customers/login' or template == 'customers/register' -%}
+      {%- unless template == 'index' or template == 'cart' or template == 'list-collections' -%}
       {% include 'Moly-breadcrumb' %}
       {%- endunless -%}
       

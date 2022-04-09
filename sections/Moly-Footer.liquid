@@ -5,10 +5,10 @@
   <div class="container">
     <div class="brand-active">
       {% for block in section.blocks %}
-      {% if block.settings.block == 'brand' %}
+      {% if block.type == 'brand' %}
       <div class="single-brand">
         <div class="brand-img">
-          <img src="{{ section.settings.brand_img }}" alt="brand-logo-{{ forloop.index }}">
+          <img src="{{ block.settings.brand_img }}" alt="brand-logo-{{ forloop.index }}">
         </div>
       </div>
       {% endif %}

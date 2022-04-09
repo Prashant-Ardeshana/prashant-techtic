@@ -90,9 +90,9 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
-        <h2 id="recover" tabindex="-1">
+        <h4 id="recover" tabindex="-1">
           {{ 'customer.recover_password.title' | t }}
-        </h2>
+        </h4>
         <div>
           <div class="login-detalis pt-40 pr-40 pl-40 pb-40">
             {%- form 'recover_customer_password' -%}
@@ -142,24 +142,24 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-xl-4 col-lg-5 col-md-6 col-sm-9">
-        <h2  id="login" tabindex="-1">
+        <h4  id="login" tabindex="-1">
           {{ 'customer.login_page.title' | t }}
-        </h2>
-        <div>
+        </h4>
+        <div class="mt-5">
           <div class="login-detalis pt-40 pr-40 pl-40 pb-40">
             {%- if recover_success == true -%}
-            <h3 class="form__message" tabindex="-1" autofocus>
+            <h5 class="form__message" tabindex="-1" autofocus>
               <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
                 <path d="M6.5 12.35C9.73087 12.35 12.35 9.73086 12.35 6.5C12.35 3.26913 9.73087 0.65 6.5 0.65C3.26913 0.65 0.65 3.26913 0.65 6.5C0.65 9.73086 3.26913 12.35 6.5 12.35Z" fill="#428445" stroke="white" stroke-width="0.7"/>
                 <path d="M5.53271 8.66357L9.25213 4.68197" stroke="white"/>
                 <path d="M4.10645 6.7688L6.13766 8.62553" stroke="white"/>
               </svg>
               {{ 'customer.recover_password.success' | t }}
-            </h3>
+            </h5>
             {%- endif -%}
             {%- form 'customer_login', novalidate: 'novalidate' -%}
             {%- if form.errors -%}
-            <h2 class="form__message" tabindex="-1" autofocus>
+            <h4 class="form__message" tabindex="-1" autofocus>
               <span class="visually-hidden">{{ 'accessibility.error' | t }} </span>
               <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 13 13">
                 <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -168,7 +168,7 @@
                 <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"/>
               </svg>
               {{ 'templates.contact.form.error_heading' | t }}
-            </h2>
+            </h4>
             {{ form.errors | default_errors }}
             {%- endif -%}
             <div class="login-input">

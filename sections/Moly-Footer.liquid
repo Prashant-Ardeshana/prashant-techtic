@@ -1,8 +1,164 @@
+
+<!-- =================Brand Area Starts================= -->
+
+<div class="brand-area">
+  <div class="container">
+    <div class="brand-active">
+      {% for block in section.blocks %}
+      {% if section.settings.block == 'brand' %}
+      <div class="single-brand">
+        <div class="brand-img">
+          <img src="{{ section.settings.brand_img }}" alt="brand-logo-{{ forloop.index }}">
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- =================Brand Area Ends================= -->
+
+{% if section.settings.show_newsletter %}
+{% if section.settings.show_only_homepage %}
+<!-- =================Subscribe Area Starts================= -->
+<div class="subscribe-area subscribe-area-2 pt-20 pb-30 ">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12">
+        <div class="discount-text ">
+          <p>Get Discount 30% Off !</p>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12">
+        <form action="#">
+          <input type="email" placeholder="Enter Your Email...">
+          <button>Subscribe</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- =================Subscribe Area Starts================= -->
+{% endif %}
+{% endif %}
+
+<!-- =================Footer Area Starts================= -->
+
+<footer class="footer-area footer-area-2 ">
+  <div class="footer-menu pt-40 pb-40">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+          <div class="footer-widget">
+            <h4>Informatino</h4>
+            <ul class="footer-info">
+              <li><a href="about-page.html">About Us</a></li>
+              <li><a href="login-page.html">My Account</a></li>
+              <li><a href="about-page.html">Privacy Ploicy</a></li>
+              <li><a href="about-page.html"> Trems & Conditions</a></li>
+              <li><a href="about-page.html">Delivery Information</a></li>
+              <li><a href="about-page.html">Information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+          <div class="footer-widget">
+            <h4>Cusom Service</h4>
+            <ul class="footer-info">
+              <li><a href="about-page.html">About Us</a></li>
+              <li><a href="login-page.html">My Account</a></li>
+              <li><a href="about-page.html">Privacy Ploicy</a></li>
+              <li><a href="about-page.html"> Trems & Conditions</a></li>
+              <li><a href="about-page.html">Delivery Information</a></li>
+              <li><a href="about-page.html">Information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+          <div class="footer-widget">
+            <h4>My Account</h4>
+            <ul class="footer-info">
+              <li><a href="about-page.html">About Us</a></li>
+              <li><a href="login-page.html">My Account</a></li>
+              <li><a href="about-page.html">Privacy Ploicy</a></li>
+              <li><a href="about-page.html"> Trems & Conditions</a></li>
+              <li><a href="about-page.html">Delivery Information</a></li>
+              <li><a href="about-page.html">Information</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+          <div class="footer-widget">
+            <h4>Extras</h4>
+            <ul class="footer-info">
+              <li><a href="about-page.html">About Us</a></li>
+              <li><a href="login-page.html">My Account</a></li>
+              <li><a href="about-page.html">Privacy Ploicy</a></li>
+              <li><a href="about-page.html"> Trems & Conditions</a></li>
+              <li><a href="about-page.html">Delivery Information</a></li>
+              <li><a href="about-page.html">Information</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="footer-bottom pt-25">
+    <div class="container">
+      <div class="copyright d-inline-block ">
+        <p>CopyRight ©2019  Design by <a href="https://themeforest.net/user/wpsmasher" target="_blank">@Wpsmasher</a>. All Rights Reserved.</p>
+      </div>
+      <div class="payment-card float-right">
+        <ul class=" d-flex">
+          <li><a href="#"><i class="fab fa-cc-paypal" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-cc-stripe" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-cc-visa" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-cc-mastercard" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-cc-amex" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- =================Footer Area Ends================= -->
+
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+   "name":"Moly Footer",
+   "settings":[
+      {
+         "type":"checkbox",
+         "id":"show_newsletter",
+         "label":"Show NewsLetter",
+         "default": true
+      },
+	  {
+         "type":"checkbox",
+         "id":"show_only_homepage",
+         "label":"Show NewsLetter Only Homepage",
+         "default": true
+      }
+   ],
+   "blocks":[
+      {
+         "type":"brand",
+         "name":"Brand Slide",
+         "settings":[
+            {
+               "type":"image_picker",
+               "id":"brand_img",
+               "label":"Brand logo image"
+            }
+         ]
+      }
+   ]
+}
+
 {% endschema %}
 
 {% stylesheet %}

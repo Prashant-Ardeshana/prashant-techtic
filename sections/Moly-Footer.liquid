@@ -25,17 +25,28 @@
 <div class="subscribe-area subscribe-area-2 pt-20 pb-30 ">
   <div class="container">
     <div class="row">
+      {%- if section.settings.newsletter_heading != blank -%}
       <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12">
         <div class="discount-text ">
-          <p>Get Discount 30% Off !</p>
+          <p>{{ section.settings.newsletter_heading | escape }}</p>
         </div>
       </div>
-      <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12">
-        <form action="#">
-          <input type="email" placeholder="Enter Your Email...">
-          <button>Subscribe</button>
-        </form>
+      {%- endif -%}
+      <div class="col-xl-6 col-lg-7 col-md-7 col-sm-12 mx-auto">
+        {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <input id="NewsletterForm--{{ section.id }}" type="email" name="contact[email]" class="field__input" value="{{ form.email }}" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" {% if form.errors %} autofocus aria-invalid="true" aria-describedby="ContactFooter-error" {% elsif form.posted_successfully? %} aria-describedby="ContactFooter-success" {% endif %} placeholder="{{ 'newsletter.label' | t }}" required >
+        <button type="submit" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+          Subscribe
+        </button>
 
+        {%- if form.errors -%}
+        <small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+        {%- endif -%}
+        {%- if form.posted_successfully? -%}
+        <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+        {%- endif -%}
+        {%- endform -%}
       </div>
     </div>
   </div>
@@ -142,6 +153,12 @@
          "id":"show_only_homepage",
          "label":"Show NewsLetter Only Homepage",
          "default": true
+      },
+	  {
+         "type":"text",
+         "id":"newsletter_heading",
+         "label":"Newsletter Heading",
+         "default": "Get Discount 30% Off !"
       }
    ],
    "blocks":[

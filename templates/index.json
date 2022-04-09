@@ -37,10 +37,16 @@
       "type": "Moly-collection-list",
       "settings": {
       }
+    },
+    "1649482881b5d6bdde": {
+      "type": "Moly-Product-discount",
+      "settings": {
+      }
     }
   },
   "order": [
     "164943788700e7ad41",
-    "1649482398404e3422"
+    "1649482398404e3422",
+    "1649482881b5d6bdde"
   ]
 }

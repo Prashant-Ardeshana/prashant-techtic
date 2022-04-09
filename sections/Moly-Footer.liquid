@@ -8,7 +8,7 @@
       {% if block.type == 'brand' %}
       <div class="single-brand">
         <div class="brand-img">
-          <img src="{{ block.settings.brand_img }}" alt="brand-logo-{{ forloop.index }}">
+          <img src="{{ block.settings.brand_img | img_url: 'master' }}" alt="brand-logo-{{ forloop.index }}">
         </div>
       </div>
       {% endif %}

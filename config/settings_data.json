@@ -139,7 +139,11 @@
           "show_brands": true,
           "show_newsletter": true,
           "show_only_homepage": false,
-          "newsletter_heading": "Get Discount 30% Off !"
+          "newsletter_heading": "Get Discount 30% Off !",
+          "menu1_title": "Information",
+          "menu2_title": "Customer Service",
+          "menu3_title": "My Account",
+          "menu4_title": ""
         }
       }
     },

@@ -10,9 +10,9 @@
         <div class="sample-warpper position-relative">
           <div class="sample-img">
             {% if collection.image %}
-            <img src="{{ collection | img_url: 'master' }}"  alt="{{ collection.title | escape }}" display="block" />
+            <img src="{{ collection | img_url: '170x170' }}"  alt="{{ collection.title | escape }}" display="block" />
             {% else %}
-            <img src="{{ collection.products.first | img_url: 'master' }}"  alt="{{ collection.title | escape }}" display="block" />
+            <img src="{{ collection.products.first | img_url: '170x170' }}"  alt="{{ collection.title | escape }}" display="block" />
             {% endif %}
           </div>
           <div class="sample-content text-center">

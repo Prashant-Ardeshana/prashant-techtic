@@ -1,5 +1,3 @@
-
-{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
 {%- assign t = template | split: '.' | first -%}
 
 <!-- =================Page Title Area Starts================= -->
@@ -8,9 +6,9 @@
   <div class="container">
     <div class="row">
       <div class="col-xl-12">
-        <div class="page-titel-detalis  ">
+        <div class="page-titel-detalis">
           <div class="page-title position-relative">
-            <h2>{{ 'customer.login_page.title' | t }}</h2>
+            <h2>{{ 'customer.register.title' | t }}</h2>
           </div>
           <div class="page-bc">
             <nav aria-label="breadcrumb">
@@ -74,7 +72,6 @@
                 {%- endcase -%}
               </ol>
             </nav>
-            {%- endunless -%}
           </div>
         </div>
       </div>

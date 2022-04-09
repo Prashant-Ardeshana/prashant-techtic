@@ -138,7 +138,6 @@
         "settings": {
           "show_brands": true,
           "show_newsletter": true,
-          "show_only_homepage": true,
           "newsletter_heading": "Get Discount 30% Off !",
           "menu1_title": "Information",
           "menu1": "header-menu",

@@ -20,9 +20,7 @@
 <!-- =================Brand Area Ends================= -->
 {% endif %}
 
-{% if section.settings.show_only_homepage or template == 'index' %}
 {% if section.settings.show_newsletter %}
-
 <!-- =================Subscribe Area Starts================= -->
 <div class="subscribe-area subscribe-area-2 pt-20 pb-30 ">
   <div class="container">
@@ -54,7 +52,6 @@
   </div>
 </div>
 <!-- =================Subscribe Area Starts================= -->
-{% endif %}
 {% endif %}
 
 <!-- =================Footer Area Starts================= -->
@@ -162,12 +159,6 @@
          "type":"checkbox",
          "id":"show_newsletter",
          "label":"Show NewsLetter",
-         "default":true
-      },
-      {
-         "type":"checkbox",
-         "id":"show_only_homepage",
-         "label":"Show NewsLetter Only Homepage",
          "default":true
       },
       {

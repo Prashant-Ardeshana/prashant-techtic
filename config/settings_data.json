@@ -136,8 +136,10 @@
           "6899f384-8680-4568-b95d-afbe2cada245"
         ],
         "settings": {
+          "show_brands": true,
           "show_newsletter": true,
-          "show_only_homepage": true
+          "show_only_homepage": false,
+          "newsletter_heading": "Get Discount 30% Off !"
         }
       }
     },

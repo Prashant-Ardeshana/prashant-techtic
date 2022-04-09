@@ -1,6 +1,7 @@
 {
   "current": {
     "breadcrumb_img": "shopify:\/\/shop_images\/chechout-page-bg.jpg",
+    "page_not_found": "shopify:\/\/shop_images\/404.png",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",

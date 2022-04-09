@@ -79,6 +79,66 @@
           "logo": "shopify:\/\/shop_images\/logo.png",
           "menu": "header-menu"
         }
+      },
+      "Moly-Footer": {
+        "type": "Moly-Footer",
+        "blocks": {
+          "db65fa20-b466-4b8e-9ddd-61f055f2530f": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand1_1c654647-0889-4fe1-bfc8-e84568389320.png"
+            }
+          },
+          "9bbbc932-4a18-40e7-ac15-097a0303814b": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand4_5c03fbea-5d1a-45b9-b8ac-3def607df9dc.png"
+            }
+          },
+          "3dcd4927-065d-4695-8dc9-3a583e82faba": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand2_385b3f7d-6d4f-492c-8fde-4aab63d4d379.png"
+            }
+          },
+          "5305263e-5d0c-4f93-8c83-e2882c583559": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand3_fafc860b-fcd1-4dea-89b4-087c7a43b9c3.png"
+            }
+          },
+          "89d6d72d-f1a4-44bc-bedf-49dc1fd99dee": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand1_1c654647-0889-4fe1-bfc8-e84568389320.png"
+            }
+          },
+          "40aeb32d-853d-4b4a-9251-8ed3f9f0c4b5": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand4_5c03fbea-5d1a-45b9-b8ac-3def607df9dc.png"
+            }
+          },
+          "6899f384-8680-4568-b95d-afbe2cada245": {
+            "type": "brand",
+            "settings": {
+              "brand_img": "shopify:\/\/shop_images\/brand2_385b3f7d-6d4f-492c-8fde-4aab63d4d379.png"
+            }
+          }
+        },
+        "block_order": [
+          "db65fa20-b466-4b8e-9ddd-61f055f2530f",
+          "9bbbc932-4a18-40e7-ac15-097a0303814b",
+          "3dcd4927-065d-4695-8dc9-3a583e82faba",
+          "5305263e-5d0c-4f93-8c83-e2882c583559",
+          "89d6d72d-f1a4-44bc-bedf-49dc1fd99dee",
+          "40aeb32d-853d-4b4a-9251-8ed3f9f0c4b5",
+          "6899f384-8680-4568-b95d-afbe2cada245"
+        ],
+        "settings": {
+          "show_newsletter": true,
+          "show_only_homepage": true
+        }
       }
     },
     "content_for_index": [

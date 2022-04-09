@@ -115,7 +115,7 @@
         "type": "text",
         "id": "register_msg",
         "label": "Register Title",
-        "default": "Register"
+        "default": "Create account"
       }
     ]
   },
